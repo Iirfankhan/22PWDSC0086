@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./gymm.jpg'); 
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif; 
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background: rgba(77, 99, 100, 0.935);
+    z-index: 1000; /* Ensure the navbar is on top */
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00fff7e0;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color: #fded36; 
+    border-bottom: .1rem solid #fded36; 
+    padding-bottom: .5rem;
+}
+/* Active Link Style */
+nav ul li a.active {
+    color: #fded36; 
+    border-bottom: .1rem solid #fded36; 
+    padding-bottom: .5rem; /* Optional: Add padding to bottom for better spacing */
+}
+
+
+a, button {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    background: #00fff7c1;
+    border: 2px solid #fdec36  ;
+    border-radius: 50px;
+    padding: 9px 25px;
+}
+
+button:hover {
+    background-color: #fdec36 ;
+    transition: all 0.4s ease 0s;
+}
+
+
+.workout-plans {
+    padding: 100px 20px; /* Add padding to avoid overlap with fixed header */
+    text-align: center;
+}
+
+.workout-plans h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.workout-plans p {
+    font-size: 1.1em;
+    color: #efeded;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for workout plans */
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+/* Individual plan item styles */
+.plan-item {
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.plan-item:hover {
+    transform: scale(1.05); 
+}
+
+.plan-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #fded36; 
+}
+
+.plan-item p {
+    color: #ffffff;
+}
+
+
+.plan-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+footer .social-media {
+    margin-top: 0.5em;
+}
+
+footer .social-media a {
+    color: #fded36;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer .social-media a:hover {
+    color: #00fff7; 
+}
+
+
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+}
